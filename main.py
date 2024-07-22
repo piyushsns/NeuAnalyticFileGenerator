@@ -65,7 +65,7 @@ class NeuAnalyticFileGenerator:
     def write_to_file(self):
         # Calculate special line
         special_line = f"HR00{self.client_number}{self.file_type}{self.record_datetime}                  {len(self.lines)}"
-        filename = f"{self.file_type}_{self.client_number}_{self.vendor_code}_{self.date}.txt"
+        filename = f"./exported_files/{self.file_type}_{self.client_number}_{self.vendor_code}_{self.date}.txt"
         try:
             with open(filename, 'w') as f:
                 # Write the special line at the beginning
